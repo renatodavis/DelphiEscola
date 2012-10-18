@@ -1,0 +1,24 @@
+program school;
+
+uses
+  Forms,
+  MainPrincipal in 'Projeto\src\MainPrincipal.pas' {Main},
+  uDm in 'Projeto\banco\uDm.pas' {dmGeral: TDataModule},
+  u_cadastropadrao in 'Projeto\src\u_cadastropadrao.pas' {FormPadrao},
+  uAluno in 'Projeto\src\uAluno.pas' {FormAluno},
+  uturma in 'Projeto\src\uturma.pas' {FormTurma},
+  uTurmaAluno in 'Projeto\src\uTurmaAluno.pas' {FormTurmaAluno},
+  uTurmaAlunoIncluir in 'Projeto\src\uTurmaAlunoIncluir.pas' {FormTurmaAlunoIncluir},
+  uMensalidade in 'Projeto\src\uMensalidade.pas' {FormMensalidade},
+  uPesqPessoa in 'Projeto\src\uPesqPessoa.pas' {FormSelecionaPessoa},
+  uCores in 'Projeto\lib\uCores.pas',
+  uEventoAtividade in 'Projeto\src\uEventoAtividade.pas' {FormEventoAtividade};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.CreateForm(TMain, Main);
+  Application.CreateForm(TdmGeral, dmGeral);
+  Application.Run;
+end.
